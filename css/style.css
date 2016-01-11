@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display+SC:700,400);
+
+body {
+	position: relative;
+	background-color: #eeeddc;
+	color: #5b3421;
+}
+img {
+	max-width: 200px;
+}
+/* Headlines */
+h1, h2, h3, nav {
+	font-family: 'Playfair Display SC', serif;
+	font-weight: 700;
+}
+
+/* Header Navigation */
+header .navbar {
+	padding: 10px 0;
+	font-size: 1.1em;
+	transition: all .5s ease-out;
+}
+
+header .navbar-default {
+	background-color: rgba(255, 255, 255, 0.75);
+	border: 0;
+}
+
+header .navbar-default .navbar-nav a {
+	color: #310000;
+}
+
+header .navbar-default .navbar-nav a:hover {
+	color: #759c03;
+}
+
+header .navbar-default .navbar-nav .active a, header .navbar-default .navbar-nav .active a:hover{
+	font-weight: bold;
+	color: #a70a25;
+	background-color: transparent;
+}
+
+@media only screen
+and (max-width: 768px) {
+	/* !Important, make sure to set navbar to the position static to push down the content 
+	 so it does not scroll behind the nav item list in smaller screen */
+	header .navbar.navbar-default.navbar-fixed-top {
+		position: static;
+		overflow: visible;
+		margin-bottom: 30px;
+	}
+
+	header .navbar-collapse.in {
+		background-color: rgba(0,0,0,0.2) !important;
+	}
+	header .navbar-collapse.in .nav>li>a {
+		padding: 10px 15px;
+		border-bottom: dotted 1px #9d4901;
+	}
+}
+
+/* nav inbody */
+header .inbody {
+	background: rgba(255, 217, 78, 0.85);
+}
+/* Navbar Brand */
+header .navbar-brand {
+	max-width: 320px;
+	min-width: 240px;
+	width: 36%;
+	background: url(../images/logo-bakery.png);
+	background-repeat: no-repeat;
+	background-position: 15px 0;
+	background-size: 32%;
+	position: absolute;
+	min-height: 100px;
+	height: auto;
+	overflow: visible;
+}
+
+header .nav>li>a {
+	padding: 15px 10px;/* overwrite the default of 10px 15px */
+}
+
+header .navbar-brand h1 {
+	color: #16548e;
+	font-size: 2.4em;
+	font-weight: bolder;
+	padding-left: 2.4em;
+	margin-top: 5px;
+	font-family: 'Alex Brush', cursive;
+}
+
+header .navbar-brand span.subhead{
+	font-size: .65em;
+	font-family: 'Roboto Slab', serif;
+	display: block;
+	/*color: #0863b8;*/
+	color: #097fed;
+	margin-top: -10px;
+	margin-left: 5px;
+	white-space: nowrap;
+}
+
+/* Navbar Toggle */
+header .navbar-toggle {
+	background-color: #16548e;
+}
+
+header .navbar-defaut .navbar-toggle .icon-bar {
+	background-color: #16548e;
+}
+
+/* Featured Carousel Slide Show */
+#featured .carousel-indicators li {
+	display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #fff;
+    border-radius: 10px
+}
+
+/* Mission */
+#mission {
+	background-color: #ffd94e;
+	background-image: linear-gradient(to bottom, #586D74, #8badb9);
+	border-top: solid 20px #d69834;
+}
+
+/* Page -- Services */
+#services {
+	margin: 20px 0;
+	text-align: center;
+}
+
+#services img.icon{
+	display: block;
+	width: 80px;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+#services h3, #staff h3 {
+	font-size: 1.2em;
+}
+
+@media only screen
+and (min-width: 450px)
+mad (max-width: 768px) {
+	.service p {
+		padding: 0 20px;
+	}
+}
+
+/* Page -- Staff */
+#staff {
+	background-color: #8badb9;
+}
+
+.staff {
+	margin: 10px 0;
+}
+.staff img {
+	width: 100%;
+}
+
+/* Page --  Testimonials */
+#testimonials {
+	padding: 0;
+}
+
+/*#testimonials h2{
+	display: none;
+}*/
+
+#testimonials blockquote {
+  margin: 0;
+  padding: 0;
+  border-left: none;
+  min-height: 500px;
+  position: relative;
+}
+
+#testimonials blockquote .quote {
+  background-color: rgba(255,255,255,.6);
+  padding: 20px 5%;
+  position: absolute;
+  bottom: 20px;
+  width: 75%;
+  font-weight: 400;
+  border-radius: 0 25px 0 0;
+}
+
+#testimonials blockquote .quote:hover {
+  background-color: rgba(239,240,196,.9);
+}
+
+#bread{
+	background: url(../images/testimonial-bread.jpg) no-repeat center;
+	background-size: cover;
+	background-position: calc(100% - 20px) calc(100% - 20px);
+}
+
+#cake {
+	background: url(../images/testimonial-cake.jpg) no-repeat center;
+	background-size: cover;
+	background-position: calc(100% - 20px) calc(100% - 20px);
+}
+
+#coffee {
+	background: url(../images/testimonial-coffee.jpg) no-repeat center;
+	background-size: cover;
+	background-position: calc(100% - 20px) calc(100% - 20px);
+}
+
+#fruittart {
+	background: url(../images/testimonial-fruittart.jpg) no-repeat center;
+	background-size: cover;
+	background-position: calc(100% - 20px) calc(100% - 20px);
+}
+
+#testimonials .quote {
+  font-size: 1.2em;
+  line-height: 110%;
+  font-weight: 400;
+}
+
+
+#testimonials .quote .more, #testimonials .customer {
+  opacity: 0;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 10px;
+}
+
+
+#testimonials .quote:hover .more {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  display: block;
+  opacity: 1;
+  font-size: .8em;
+  line-height: 120%;
+}
+
+#testimonials .quote:hover .customer {
+  display: block;
+  font-size: .7em;
+  text-align: right;
+}
+
+#testimonials .quote .intro::after {
+  content: ' ...';
+}
+
+#testimonials .quote:hover .intro::after {
+  content: '';
+}
+
+/* Footer Navigation */
+footer {
+  background: #586D74;
+  color: white;
+  font-size: .8em;
+  padding: 20px 0 40px 0;
+}
+
+footer a {
+  color: #E0E6AE;
+}
+
+footer a:hover {
+  color: #EEC856 !important;
+}
+
+footer .phone {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #E0E6AE;
+}
+
+footer .navbar {
+  margin-bottom: 0;
+  min-height: 0;
+}
+
+footer .navbar-default {
+  background-color: transparent;
+  border: none;
+  margin-right: 40px;
+}
+
+footer .navbar-nav>li a {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-decoration: underline;
+  color: #EEC856 !important;
+}
