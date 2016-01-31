@@ -12,6 +12,27 @@ $(function(){
 	  offset: 90
 	});
 
+	// jQuery for page scrolling feature - requires jQuery Easing plugin
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+
+    // fadeIn the homebutton once the page start to scroll
+    $('.home-button').hide();
+	$(window).scroll(function() {
+	    var height = $(window).scrollTop(); 
+	    if (height  > 100) {
+	        $('.home-button').fadeIn();
+	    } else {
+	    	$('.home-button').fadeOut();
+	    }
+	});
+
+
 
 	// add inbody class to nav once the target section is in view
 	var hash = $(this).find("li.active a").attr("href");
